@@ -2,6 +2,12 @@
 
 ## Counting rules
 
+### Citation existence is not support
+
+A citation's existence is not evidence that it supports the target argument. Classify support only after checking the surrounding argumentative context, signal words, and the source's role in the paragraph or footnote.
+
+Do not count a source as support merely because it appears in a relevant footnote. It may be background, a contrary view, a reserved state position, a bibliography-only item, or a source the author rejects.
+
 ### Citation occurrence
 
 Count each independent source occurrence at each relevant citation location, after splitting footnotes and resolving cross-references.
@@ -34,6 +40,19 @@ Examples not counted as sources by themselves: see MN 105; see n. 143; ibid.; su
 If a source is introduced by any of these, do not classify it as support without checking context: but see; however; on the other hand; critically; unconvincing position; contrary view; different view; disputed; retained significance; still applicable; not affected.
 
 ## Source type rules
+
+### Source verification hierarchy
+
+When source identity, type, or bibliographic metadata is uncertain, prefer canonical or source-proximate evidence in this order:
+
+1. DOI, publisher landing page, official repository, or official document page
+2. arXiv, SSRN, HAL, institutional repository, or equivalent stable repository
+3. CrossRef, OpenAlex, Semantic Scholar, WorldCat, library catalogue, or Zotero metadata imported from a verified identifier
+4. Full bibliography, abbreviations table, cited source list, or index in the same document
+5. Surrounding footnotes, prior supra/ibid target, or repeated short-title pattern
+6. General web search results, secondary references, or inferred metadata
+
+Use lower-tier evidence only when higher-tier evidence is unavailable. Record what was checked when the item remains uncertain.
 
 ### scholarly_writing
 

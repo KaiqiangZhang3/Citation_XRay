@@ -40,7 +40,7 @@ Classify each countable source by origin/jurisdiction/legal tradition. Use the p
 
 ## Prompt 8 — Uncertain audit
 
-List all uncertain and excluded items with item_id, location, original_text, issue_type, why_uncertain_or_excluded, evidence_needed, recommended_action, affects_statistics. Do not hide uncertain items.
+List all uncertain and excluded items with item_id, location, original_text, issue_type, why_uncertain_or_excluded, verification_steps_taken, evidence_checked, evidence_needed, confidence_basis, recommended_action, affects_statistics. Do not hide uncertain items.
 
 ## Prompt 9 — Optional statistics
 

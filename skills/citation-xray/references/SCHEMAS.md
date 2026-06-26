@@ -39,8 +39,8 @@ Use Markdown, CSV, JSON, or database-ready tables. Do not omit IDs.
 
 ## H. Uncertain / excluded audit table
 
-| item_id | location | original_text | issue_type | why_uncertain_or_excluded | evidence_needed | recommended_action | affects_statistics |
-|---|---|---|---|---|---|---|---|
+| item_id | location | original_text | issue_type | why_uncertain_or_excluded | verification_steps_taken | evidence_checked | evidence_needed | confidence_basis | recommended_action | affects_statistics |
+|---|---|---|---|---|---|---|---|---|---|---|
 
 ## I. Optional statistics table
 

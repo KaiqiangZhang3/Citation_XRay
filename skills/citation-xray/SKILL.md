@@ -71,7 +71,8 @@ The workflow is:
 7. Watch for signal phrases: `but see`, `however`, `on the other hand`, `critically`, `contrary view`, `unconvincing position`, `retain full significance`, `still applicable`, `not affected`.
 8. Do not force-classify uncertain items. `uncertain` is a valid audit result.
 9. Always keep enough source text to let a human verify the judgment.
-10. Final statistics are optional and should state their counting rule.
+10. Do not treat citation existence as support. A cited source supports the target argument only if the surrounding context shows that function.
+11. Final statistics are optional and should state their counting rule.
 
 ## Required inputs
 
@@ -187,7 +188,7 @@ Fields: source_item_id, origin_class, origin_reason, origin_confidence, strict_n
 
 Create a separate audit table.
 
-Fields: item_id, location, original_text, issue_type, why_uncertain_or_excluded, what_evidence_is_needed, recommended_action, affects_statistics?.
+Fields: item_id, location, original_text, issue_type, why_uncertain_or_excluded, verification_steps_taken, evidence_checked, what_evidence_is_needed, confidence_basis, recommended_action, affects_statistics?.
 
 ### Step 10 — Optional downstream outputs
 
