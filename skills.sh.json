@@ -1,0 +1,11 @@
+{
+  "$schema": "https://skills.sh/schemas/skills.sh.schema.json",
+  "notGrouped": "bottom",
+  "groupings": [
+    {
+      "title": "Citation Analysis",
+      "description": "Skills for legal, academic, and policy citation auditing.",
+      "skills": ["citation-xray"]
+    }
+  ]
+}
