@@ -72,7 +72,9 @@ The workflow is:
 8. Do not force-classify uncertain items. `uncertain` is a valid audit result.
 9. Always keep enough source text to let a human verify the judgment.
 10. Do not treat citation existence as support. A cited source supports the target argument only if the surrounding context shows that function.
-11. Final statistics are optional and should state their counting rule.
+11. Keep human-readable outputs, machine data, raw extraction, corrected extraction, and reports in separate directories.
+12. For scanned or low-quality PDFs, complete extraction, OCR/text-layer QC, and human review or explicit provisional acceptance before classification.
+13. Final statistics are optional and should state their counting rule and extraction stage.
 
 ## Required inputs
 
@@ -85,6 +87,7 @@ If not provided, ask the user for the missing critical items.
 - source-type taxonomy
 - origin/jurisdiction taxonomy
 - whether to deduplicate repeated citations across articles/chapters/years
+- whether PDFs are text-layer PDFs or scanned/OCR documents, if known
 - desired output format: Markdown, CSV, JSON, or database-ready tables
 
 ## Default taxonomies
@@ -138,7 +141,9 @@ When classifying by legal tradition instead of strict nationality, state the rul
 
 Create a document metadata table.
 
-Fields: document_id, file_name, title, year, edition/version, chapter/article/section, page range, paragraph/MN range, text quality, footnote quality, OCR needed?, notes.
+Fields: document_id, file_name, title, year, edition/version, chapter/article/section, page range, paragraph/MN range, text layer status, OCR engine, OCR confidence, text quality, footnote quality, OCR needed?, notes.
+
+For PDFs, detect whether extraction is from a text layer or OCR. For scanned or low-quality PDFs, create the raw artifacts and extraction QC report before classification.
 
 ### Step 2 — Argument paragraph locator
 
@@ -194,7 +199,7 @@ Fields: item_id, location, original_text, issue_type, why_uncertain_or_excluded,
 
 Only after the dataset is complete or the user explicitly asks: count tables, percentages, charts, dashboards, citation networks, written explanation, errata report.
 
-Always state counting unit, support scope, exclusions, uncertain items, and deduplication rule.
+Always state counting unit, support scope, extraction stage, exclusions, uncertain items, and deduplication rule.
 
 ## Required behavior during use
 
@@ -209,6 +214,7 @@ When source classification is unclear, mark `uncertain` rather than guessing.
 Load only the reference files needed for the user's task:
 
 - `references/WORKFLOW.md` when planning or running the full citation pipeline.
+- `references/OUTPUT_WORKFLOW.md` when processing PDFs, scanned documents, OCR output, multi-document projects, file outputs, or human review loops.
 - `references/RULES.md` when deciding countability, source type, origin, or cross-reference treatment.
 - `references/SCHEMAS.md` when producing Markdown, CSV, JSON, or database-ready tables.
 - `references/PROMPTS.md` when the user wants reusable prompts or a staged workflow handoff.

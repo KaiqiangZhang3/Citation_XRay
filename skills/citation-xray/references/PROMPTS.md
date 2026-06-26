@@ -4,7 +4,11 @@
 
 You are processing legal/academic documents into an auditable citation-level dataset. Do not produce final statistics first. Follow the pipeline: locate target-argument passages; map footnotes; split independent sources; resolve cross-references; classify citation function; classify source type; classify origin; list uncertain/excluded items; generate optional outputs only after the dataset is built.
 
-Rules: Do not count cross-references as sources. Do not count contrary/reserved views as support. Do not treat scholarly works about treaties as treaty texts. Do not force-classify uncertain items. Preserve original source text for audit.
+Rules: Do not count cross-references as sources. Do not count contrary/reserved views as support. Do not treat scholarly works about treaties as treaty texts. Do not force-classify uncertain items. Preserve original source text for audit. For scanned or low-quality PDFs, complete extraction QC and human correction or explicit provisional acceptance before classification.
+
+## Prompt 0A — PDF extraction QC
+
+For each PDF, detect text-layer status, OCR need, OCR engine if used, page-level confidence if available, footnote number range, missing numbers, duplicate numbers, possible merged notes, embedded note numbers, low-confidence notes, incomplete notes, and unresolved cross-references. Save human-readable review materials separately from CSV/JSON data. Do not classify source function/type/origin until extraction is reviewed or explicitly accepted as provisional.
 
 ## Prompt 1 — Argument locator
 
@@ -40,7 +44,7 @@ Classify each countable source by origin/jurisdiction/legal tradition. Use the p
 
 ## Prompt 8 — Uncertain audit
 
-List all uncertain and excluded items with item_id, location, original_text, issue_type, why_uncertain_or_excluded, verification_steps_taken, evidence_checked, evidence_needed, confidence_basis, recommended_action, affects_statistics. Do not hide uncertain items.
+List all uncertain and excluded items with item_id, location, original_text, issue_type, extraction_stage, why_uncertain_or_excluded, verification_steps_taken, evidence_checked, evidence_needed, confidence_basis, recommended_action, affects_statistics. Use precise issue types for OCR, text layer, numbering, split, cross-reference, source identity, source type, origin, citation function, duplicate/deduplication, and excluded non-support issues. Do not hide uncertain items.
 
 ## Prompt 9 — Optional statistics
 
