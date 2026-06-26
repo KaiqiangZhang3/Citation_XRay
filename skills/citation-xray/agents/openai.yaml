@@ -1,0 +1,6 @@
+interface:
+  display_name: "Citation X-Ray"
+  short_description: "Audit legal and academic citations."
+  default_prompt: "Use $citation-xray to process the uploaded documents into an auditable citation-level dataset."
+policy:
+  allow_implicit_invocation: true
