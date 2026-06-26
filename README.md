@@ -26,8 +26,10 @@ Citation statistics are often unreliable when an agent counts whole footnotes, t
 ## Install
 
 ```bash
-npx --yes skills add KaiqiangZhang3/Citation_XRay --skill citation-xray
+npx --yes skills add KaiqiangZhang3/Citation_XRay --skill citation-xray --global
 ```
+
+This installs `citation-xray` globally for supported agents such as Codex and Cursor. To install only in the current project, remove `--global`.
 
 To preview the available skill without installing:
 

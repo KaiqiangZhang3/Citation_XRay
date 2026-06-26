@@ -29,8 +29,10 @@ citation-xray-skill/
 4. Test installation with the Skills CLI:
 
 ```bash
-npx skills add <your-github-username>/citation-xray-skill
+npx skills add <your-github-username>/citation-xray-skill --skill citation-xray --global
 ```
+
+Remove `--global` when you want a project-level install instead of a user-level install.
 
 ## Local Codex test
 
